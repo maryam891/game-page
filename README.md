@@ -1,6 +1,6 @@
 # 🃏 JavaScript Mini Game Site
 
-A browser-based card battle game built with JavaScript. Choose your character and
+A browser-based card battle game built with JavaScript. Get a randomly generated character and
 challenge your opponent – attack strategically and outsmart them to claim victory!
 
 ## 🎮 How to Play
