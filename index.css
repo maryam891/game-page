@@ -1,0 +1,193 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+/*start of header*/
+
+#navbar {
+    background: linear-gradient(rgb(49, 49, 50),rgb(46, 46, 212));
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin-left: 10px;
+    color: rgb(217, 226, 234);
+}
+
+a {
+    text-decoration: none;
+    color:white
+}
+
+ul li {
+    list-style: none;
+    margin-right: 20px;
+    display: inline-block;
+    padding: 7px 7px;
+}
+
+#homepage-header {
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+/* End of header*/
+
+/* Start of homepage */
+
+#magicCardsContainer {
+    margin-top: 30px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns:repeat(3,auto);
+    grid-template-rows: repeat(8,auto);
+    justify-content: center;
+    align-items: center;
+
+}
+
+#background-img {
+    height: 100%;
+    width: 100%;
+}
+
+#showCards-btn, #gameRules-btn, #closeCards-btn {
+    position: absolute;
+    bottom: 80%;
+    left: 1%;
+    background-color: rgb(49, 49, 102);
+    color: rgb(224, 238, 249);
+    height: 30px;
+    border-radius: 5px;
+    width: 130px;
+    cursor: pointer;
+}
+
+/* End of home page*/
+
+/* Start of game page*/
+
+.headerFor-gamePage {
+    position: absolute;
+    bottom: 80%;
+    left: 40%;
+    color: rgb(228, 224, 219);
+    background-color: rgba(4, 4, 60, 0.329);
+}
+
+#Start-gameContainer {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns:repeat 100px,(3,auto);
+    grid-template-rows: repeat(3,auto);
+    justify-content: space-around;
+    margin-left: 20px;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+.gameContainer {
+    background-color: rgba(240, 248, 255, 0.667);
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    top: 23%;
+    left: 10%;
+    border-radius: 5px;
+}
+
+.gameRulesContainer {
+    background: linear-gradient(rgb(53, 53, 58),rgb(8, 8, 127));
+    height: 400px;
+    width: 500px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    border-radius: 10px;
+}
+
+.gameRulesContainer h2 {
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(156, 156, 167);
+}
+
+#gameRulestext {
+    margin-left: 10px;
+    color: rgb(156, 156, 167);
+    margin-top: 20px;
+    padding-right: 22px;
+    padding-left: 20px;
+    width: 84%;
+    height: 40%;
+}
+
+#Start-gameContainer h1 {
+    text-align: center;
+    color: rgb(156, 156, 167);
+    margin-top: 20px;
+}
+#Start-gameContainer h2 {
+    color: rgb(63, 63, 122);
+    text-align: left;
+    grid-row-start: 1;
+}
+
+#startGame-btn {
+    position: absolute;
+    left: 43%;
+    top: 20%;
+    height: 40px;
+    width: 120px;
+    background-color: rgb(49, 49, 102);
+    color: rgb(224, 238, 249);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#getNewCardBtn,#attackBtn {
+    height: 30px;
+    width: 100px;
+    background-color: rgb(49, 49, 102);
+    color: rgb(224, 238, 249);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#playAgainBtn {
+    position: absolute;
+    left: 43%;
+    top: 20%;
+    height: 40px;
+    width: 120px;
+    background-color: rgb(49, 49, 102);
+    color: rgb(224, 238, 249);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#closeBtn {
+    position: absolute;
+    left: 38%;
+    top: 72%;
+    height: 30px;
+    width: 90px;
+    background-color: rgb(49, 49, 102);
+    color: rgb(224, 238, 249);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* End of game page*/
