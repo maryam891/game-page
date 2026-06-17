@@ -1,14 +1,14 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
 /*start of header*/
 
 #navbar {
-    background: linear-gradient(rgb(49, 49, 50),rgb(46, 46, 212));
+    background: linear-gradient(rgb(49, 49, 50), rgb(46, 46, 212));
     height: 50px;
     width: 100%;
     display: flex;
@@ -23,7 +23,7 @@ h1 {
 
 a {
     text-decoration: none;
-    color:white
+    color: white
 }
 
 ul li {
@@ -38,6 +38,7 @@ ul li {
     margin-top: 20px;
     color: black;
 }
+
 /* End of header*/
 
 /* Start of homepage */
@@ -46,8 +47,8 @@ ul li {
     margin-top: 30px;
     display: grid;
     gap: 5px;
-    grid-template-columns:repeat(3,auto);
-    grid-template-rows: repeat(8,auto);
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(8, auto);
     justify-content: center;
     align-items: center;
 
@@ -58,7 +59,9 @@ ul li {
     width: 100%;
 }
 
-#showCards-btn, #gameRules-btn, #closeCards-btn {
+#showCards-btn,
+#gameRules-btn,
+#closeCards-btn {
     position: absolute;
     bottom: 80%;
     left: 1%;
@@ -85,8 +88,8 @@ ul li {
 #Start-gameContainer {
     margin-top: 30px;
     display: grid;
-    grid-template-columns:repeat 100px,(3,auto);
-    grid-template-rows: repeat(3,auto);
+    grid-template-columns: repeat (3, auto);
+    grid-template-rows: repeat(3, auto);
     justify-content: space-around;
     margin-left: 20px;
     align-items: center;
@@ -105,7 +108,7 @@ ul li {
 }
 
 .gameRulesContainer {
-    background: linear-gradient(rgb(53, 53, 58),rgb(8, 8, 127));
+    background: linear-gradient(rgb(53, 53, 58), rgb(8, 8, 127));
     height: 400px;
     width: 500px;
     position: absolute;
@@ -135,6 +138,7 @@ ul li {
     color: rgb(156, 156, 167);
     margin-top: 20px;
 }
+
 #Start-gameContainer h2 {
     color: rgb(63, 63, 122);
     text-align: left;
@@ -154,7 +158,8 @@ ul li {
     font-size: 20px;
 }
 
-#getNewCardBtn,#attackBtn {
+#getNewCardBtn,
+#attackBtn {
     height: 30px;
     width: 100px;
     background-color: rgb(49, 49, 102);
