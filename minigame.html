@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,26 +20,10 @@
         <button id="startGame-btn">Start game</button>
         <div id="Start-gameContainer" style="display: none">
           <div id="player1" style="margin-top: 20px; grid-row-start: 2"></div>
-          <p
-            class="pointsCountText"
-            style="
-              display: none;
-              font-size: 20px;
-              grid-row-start: 1;
-              grid-column-start: 2;
-            "
-          >
-            Your points are:
-          </p>
-          <p
-            class="pointsCount"
-            style="
-              display: none;
-              font-size: 20px;
-              grid-row-start: 1;
-              grid-column-start: 3;
-            "
-          ></p>
+          <div class="pointsContainer">
+            <p class="pointsCountText">Your points are:</p>
+            <p class="pointsCount"></p>
+          </div>
           <button id="attackBtn" style="display: none; grid-row-start: 2">
             Attack
           </button>
@@ -57,15 +41,14 @@
       <div class="gameRulesContainer" style="display: none">
         <h2>How the mini game works:</h2>
         <p id="gameRulestext">
-          This is a mini game where you should get as many points as possible by
-          attacking the opponent. If you get 15 or more points you win! To play
-          click on the
-          <strong>Start game button</strong> Then you will see two cards, one of
-          the cards is yours and one is the opponents card. If the opponent has
-          more power than you, you lose one point and need to click on
-          <strong>Get new card</strong> to draw a new card. If you and the
-          opponent have the same card it's a tie and you get to draw a new card.
-          After each attack you get a new random opponent.
+          Battle your opponent to beat your high score! Click
+          <strong>Start game button</strong> to get started. You and your
+          opponent each get a random card, if your card has higher
+          <strong>power</strong> and <strong>toughness</strong> than your
+          opponent, click <strong>Attack</strong> to earn a point. If your
+          opponent is stronger, you lose a point and must draw a new card with
+          <strong>Get new card</strong>. If neither card wins on both stats,
+          it's a tie and you draw a new card. Reach 0 points and lose a round.
         </p>
         <p
           style="

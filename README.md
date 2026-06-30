@@ -6,7 +6,13 @@ challenge your opponent – attack them as many times as possible to claim victo
 ## 🎮 How to Play
 
 - ⚔️ Click **Attack** to battle your opponent
-- 🏆 Win a round by having a higher **Power** or **toughness** than your opponent → earn a point
-- 💀 Lose a round if your opponent has higher **Power** or **toughness** → lose a point
-- 🎉 Reach **10 points** to win the game
-- ❌ Drop to **0 points** and it's game over
+- 🏆 Win a round by having a higher **Power** and **toughness** than your opponent → earn a point
+- 💀 Lose a round if your opponent has higher **Power** and **toughness** → lose a point
+- 🎉 Beat your high score to win the game
+- ❌ Reach to **0 points** and it's game over
+
+## 🛠️ Tech Stack
+
+| Layer    | Technologies          |
+| -------- | --------------------- |
+| Frontend | JavaScript, HTML, CSS |

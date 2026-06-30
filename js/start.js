@@ -10,6 +10,7 @@ showCardsBtn.addEventListener("click", () => {
   fetch("https://api.magicthegathering.io/v1/cards")
     .then((response) => response.json())
     .then((result) => {
+      console.log(result);
       showCardsBtn.style.display = "none";
       closeCardsBtn.style.display = "block";
       backgroundImg.style.display = "none";
