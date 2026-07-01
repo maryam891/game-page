@@ -111,9 +111,7 @@ function handleGameOver() {
   textState.style.display = "block";
   attackBtn.style.display = "none";
   playAgainBtn.style.display = "block";
-  pointCountText.style.display = "none";
   getNewCardBtn.style.display = "none";
-  pointCount.style.display = "none";
   handleStoreHighScore();
 }
 
@@ -190,11 +188,10 @@ startGameBtn.addEventListener("click", async () => {
     attackBtn.disabled = true;
     attackBtn.style.display = "block";
     attackBtn.style.backgroundColor = "gray";
-    pointCount.style.display = "block";
     points = points - 1;
     pointCount.innerHTML = points;
     textState.style.display = "block";
-    pointsContainer.style.display = "inline";
+    pointsContainer.style.display = "block";
     textState.textContent = "You lost a point";
     document.getElementById("player-card1").style.animation =
       "opacityShake .5s";
@@ -210,7 +207,7 @@ startGameBtn.addEventListener("click", async () => {
     playAgainBtn.style.display = "none";
     textState.style.display = "block";
     textState.textContent = "One point to you!";
-    pointsContainer.style.display = "inline";
+    pointsContainer.style.display = "block";
     points = points + 1;
     handleStoreHighScore();
     pointCount.innerHTML = points;
@@ -254,7 +251,7 @@ attackBtn.addEventListener("click", async () => {
     playAgainBtn.style.display = "none";
     textState.style.display = "block";
     textState.textContent = "One point to you!";
-    pointsContainer.style.display = "inline";
+    pointsContainer.style.display = "block";
     points = points + 1;
     pointCount.innerHTML = points;
     handleStoreHighScore();
@@ -274,7 +271,7 @@ attackBtn.addEventListener("click", async () => {
     attackBtn.style.backgroundColor = "gray";
     textState.textContent = "You lost a point";
     textState.style.display = "block";
-    pointsContainer.style.display = "inline";
+    pointsContainer.style.display = "block";
     points = points - 1;
     pointCount.innerHTML = points;
     document.getElementById("player-card1").style.animation =

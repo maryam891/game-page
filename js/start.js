@@ -10,7 +10,6 @@ showCardsBtn.addEventListener("click", () => {
   fetch("https://api.magicthegathering.io/v1/cards")
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
       showCardsBtn.style.display = "none";
       closeCardsBtn.style.display = "block";
       backgroundImg.style.display = "none";
@@ -20,7 +19,14 @@ showCardsBtn.addEventListener("click", () => {
       for (let i = 0; i < 33; i++) {
         //Check for cards that have imageUrl key
         if (result.cards[i].imageUrl != undefined) {
-          magicCardContainer.innerHTML += `<div style="height:auto; width:auto;"><img src="${result.cards[i].imageUrl}" style="height:400px; width: 360px;"></div`;
+          //Create div and img element that will be the cards added to magicCardContainer
+          const card = document.createElement("div");
+          card.classList.add("cards");
+          const image = document.createElement("img");
+          image.src = result.cards[i].imageUrl;
+          image.alt = result.cards[i].name;
+          card.appendChild(image);
+          magicCardContainer.appendChild(card);
         }
       }
     });

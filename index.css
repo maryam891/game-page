@@ -39,6 +39,20 @@ ul li {
     color: rgb(49, 49, 102);
 }
 
+.cards {
+    height: auto;
+    width: auto;
+
+
+}
+
+.cards img {
+    height: 400px;
+    width: 360px;
+}
+
+
+
 /* End of header*/
 
 /* Start of homepage */
