@@ -110,6 +110,7 @@ function handleGameOver() {
   textState.textContent = "Game over";
   textState.style.display = "block";
   attackBtn.style.display = "none";
+  pointsContainer.style.display = "none";
   playAgainBtn.style.display = "block";
   getNewCardBtn.style.display = "none";
   handleStoreHighScore();
