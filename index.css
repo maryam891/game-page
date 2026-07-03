@@ -39,18 +39,6 @@ ul li {
     color: rgb(49, 49, 102);
 }
 
-.cards {
-    height: auto;
-    width: auto;
-
-
-}
-
-.cards img {
-    height: 400px;
-    width: 360px;
-}
-
 
 
 /* End of header*/
@@ -65,8 +53,41 @@ ul li {
     grid-template-rows: repeat(8, auto);
     justify-content: center;
     align-items: center;
+    perspective: 500px;
+
 
 }
+
+
+@keyframes cardReveal {
+    from {
+
+        transform: translateX(0) translateY(0) translateZ(0) scale(.8);
+    }
+
+    to {
+
+        transform: translateX(80px) translateY(80px) translateZ(30px)scale(1);
+    }
+
+
+}
+
+.cards {
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    opacity: 1;
+    animation: cardReveal alternate-reverse .7s;
+
+
+}
+
+.cards img {
+    height: 400px;
+    width: 360px;
+}
+
 
 #background-img {
     height: 100%;
