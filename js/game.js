@@ -13,8 +13,6 @@ let pointsContainer = document.querySelector(".pointsContainer");
 let pointCountText = document.querySelector(".pointsCountText");
 let getNewCardBtn = document.getElementById("getNewCardBtn");
 let textState = document.createElement("h2");
-let highScoreTextState = document.createElement("h3");
-startGameContainer.appendChild(highScoreTextState);
 startGameContainer.appendChild(textState);
 textState.style.display = "none";
 attackBtn.disabled = false;
@@ -69,10 +67,9 @@ function generateCard2() {
 }
 
 //Click event to get a new card when it's a tie
-getNewCardBtn.addEventListener("click", async () => {
+getNewCardBtn.addEventListener("click", () => {
   generateCard1();
   textState.style.display = "none";
-  highScoreTextState.style.display = "none";
   attackBtn.disabled = false;
   attackBtn.style.backgroundColor = "rgb(49, 49, 102)";
   //Empty content of player 1 to get a new card
@@ -84,7 +81,6 @@ getNewCardBtn.addEventListener("click", async () => {
 //Keep logic for tie in handletie function and call in statements where needed
 function handleTie() {
   textState.style.display = "block";
-  highScoreTextState.style.display = "none";
   textState.textContent = "Tie";
   getNewCardBtn.style.display = "block";
   attackBtn.disabled = true;
@@ -94,41 +90,34 @@ function handleTie() {
 }
 //Keep logic for win in handleWin function and call in statements where needed
 function handleWin() {
-  textState.style.display = "block";
-  textState.textContent = `You won with ${playerCard1.name}!`;
   attackBtn.style.display = "none";
   getNewCardBtn.style.display = "none";
+  pointsContainer.style.display = "none";
   playAgainBtn.style.display = "block";
   player1.style.marginRight = "10px";
   handleStoreHighScore();
 }
 //Keep logic for game over in handleGameOver function and call in statements where needed
 function handleGameOver() {
-  points = points - 1;
-  pointCount.innerHTML = points;
-  highScoreTextState.style.display = "none";
   textState.textContent = "Game over";
   textState.style.display = "block";
   attackBtn.style.display = "none";
   pointsContainer.style.display = "none";
   playAgainBtn.style.display = "block";
   getNewCardBtn.style.display = "none";
-  handleStoreHighScore();
 }
 
 function handleStoreHighScore() {
-  //Get stored high score
-  getStoredHighScore = localStorage.getItem("points");
-  //Convert string to number
+  //Convert string to number if getStoredHighScore exists and check if points is bigger than highscore to show You won text with New high score.
   getStoredHighScore = Number(getStoredHighScore);
-  //Check if points is bigger than high score to store new high score
   if (points > getStoredHighScore) {
-    highScoreTextState.style.display = "block";
-    textState.style.display = "none";
-    highScoreTextState.textContent =
-      "Congratulations, you beat the high score!";
+    textState.style.display = "block";
+    textState.textContent = `You won with ${playerCard1.name}! New high score: ${points}`;
 
     localStorage.setItem("points", points);
+  } else {
+    textState.style.display = "block";
+    textState.textContent = `You won with ${playerCard1.name}!`;
   }
 }
 
@@ -175,7 +164,6 @@ startGameBtn.addEventListener("click", async () => {
   else if (
     points <= 0 &&
     playerCard2.power > playerCard1.power &&
-    points <= 0 &&
     playerCard2.toughness > playerCard1.toughness
   ) {
     handleGameOver();
@@ -210,7 +198,6 @@ startGameBtn.addEventListener("click", async () => {
     textState.textContent = "One point to you!";
     pointsContainer.style.display = "block";
     points = points + 1;
-    handleStoreHighScore();
     pointCount.innerHTML = points;
     document.getElementById("player-card2").style.animation =
       "opacityShake .5s";
@@ -234,7 +221,6 @@ attackBtn.addEventListener("click", async () => {
   else if (
     points <= 0 &&
     playerCard2.power > playerCard1.power &&
-    points <= 0 &&
     playerCard2.toughness > playerCard1.toughness
   ) {
     handleGameOver();
@@ -255,7 +241,6 @@ attackBtn.addEventListener("click", async () => {
     pointsContainer.style.display = "block";
     points = points + 1;
     pointCount.innerHTML = points;
-    handleStoreHighScore();
     document.getElementById("player-card2").style.animation =
       "opacityShake .5s";
   }
