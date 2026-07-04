@@ -95,7 +95,8 @@ function handleWin() {
   pointsContainer.style.display = "none";
   playAgainBtn.style.display = "block";
   player1.style.marginRight = "10px";
-  handleStoreHighScore();
+  textState.textContent = `You won with ${playerCard1.name}! New high score: ${points}`;
+  localStorage.setItem("points", points);
 }
 //Keep logic for game over in handleGameOver function and call in statements where needed
 function handleGameOver() {
@@ -105,20 +106,6 @@ function handleGameOver() {
   pointsContainer.style.display = "none";
   playAgainBtn.style.display = "block";
   getNewCardBtn.style.display = "none";
-}
-
-function handleStoreHighScore() {
-  //Convert string to number if getStoredHighScore exists and check if points is bigger than highscore to show You won text with New high score.
-  getStoredHighScore = Number(getStoredHighScore);
-  if (points > getStoredHighScore) {
-    textState.style.display = "block";
-    textState.textContent = `You won with ${playerCard1.name}! New high score: ${points}`;
-
-    localStorage.setItem("points", points);
-  } else {
-    textState.style.display = "block";
-    textState.textContent = `You won with ${playerCard1.name}!`;
-  }
 }
 
 // Start game
@@ -243,6 +230,12 @@ attackBtn.addEventListener("click", async () => {
     pointCount.innerHTML = points;
     document.getElementById("player-card2").style.animation =
       "opacityShake .5s";
+    if (points > getStoredHighScore) {
+      handleWin();
+    } else {
+      textState.style.display = "block";
+      textState.textContent = "One point to you!";
+    }
   }
 
   //State for when player 2 has more power and toughness than player 1
